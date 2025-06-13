@@ -7,7 +7,7 @@ export function activate(context: vscode.ExtensionContext) {
     "positronExtension.demo",
     () => {
     
-      console.log(`Hello from ${inPositron() ? 'Positron': 'VSCode'}!`)
+      console.log(`Hello from ${inPositron() ? 'Positron': 'VSCode'}!`);
 
       const positron = tryAcquirePositronApi();
 

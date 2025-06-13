@@ -24,9 +24,14 @@ Click the "Use this template" button on GitHub to create your own repository bas
 ```
 positron-extension-template/
 ├── src/
-│   └── extension.ts      # Main extension entry point
+│   ├── extension.ts      # Main extension entry point
+│   └── test/            # Test files
+│       ├── suite/       # Integration tests
+│       ├── mocks/       # API mocks
+│       └── helpers/     # Test utilities
 ├── package.json          # Extension manifest
 ├── tsconfig.json         # TypeScript configuration
+├── .vscode-test.mjs     # VS Code test configuration
 └── README.md            # This file
 ```
 
@@ -44,6 +49,28 @@ positron-extension-template/
 - `npm run compile` - Compile TypeScript to JavaScript
 - `npm run watch` - Watch for changes and recompile
 - `npm run lint` - Run ESLint
+- `npm run test` - Run test suite
+- `npm run pretest` - Compile and lint before testing
+
+### Testing
+
+This template includes a lightweight testing setup for VS Code extensions:
+
+- **Test Framework**: Mocha with TDD style
+- **Mocking**: Sinon for API mocking
+- **Test Runner**: Modern `@vscode/test-cli`
+- **Coverage**: Tests extension activation, command registration, and API interactions
+
+Run tests with:
+```bash
+npm test
+```
+
+The test suite includes:
+- Extension activation and presence verification
+- Command registration testing
+- Basic Positron API mocking for isolated testing
+- Graceful degradation when APIs are unavailable
 
 ## 📚 Positron API Examples
 
