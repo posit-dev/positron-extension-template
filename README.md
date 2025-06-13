@@ -119,17 +119,6 @@ positron.runtime.executeCode(
 );
 ```
 
-## 🎯 Extension Ideas
-
-Here are some ideas for extensions you could build:
-
-- **Data Connectors**: Connect to databases, APIs, or cloud services
-- **Visualization Tools**: Create custom data visualizations
-- **Code Generators**: Generate boilerplate code for common tasks
-- **Workflow Automation**: Automate repetitive data science tasks
-- **Custom Viewers**: Display specialized file formats or data types
-- **Language Support**: Add support for domain-specific languages
-
 ## 📖 Resources
 
 - [Positron Documentation](https://positron.posit.co/)
@@ -137,14 +126,14 @@ Here are some ideas for extensions you could build:
 - [@posit-dev/positron npm package](https://www.npmjs.com/package/@posit-dev/positron)
 - [VS Code Extension Samples](https://github.com/microsoft/vscode-extension-samples)
 
-## 🤝 Contributing
+## Contributing
 
 This is a template repository! Feel free to:
 - Report issues or suggest improvements
 - Submit PRs to enhance the template
 - Share your extensions built with this template
 
-## 📄 License
+## License
 
 This template is available under the MIT License. See LICENSE file for details.
 
