@@ -13,6 +13,7 @@ coverage/
 *.lcov
 .nyc_output
 .vscode-test/
+.positron-test/
 
 # IDE
 .vscode/*
