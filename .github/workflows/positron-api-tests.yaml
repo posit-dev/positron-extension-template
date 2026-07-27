@@ -14,7 +14,6 @@ permissions:
 
 jobs:
   test:
-    # @posit-dev/positron-test-electron currently supports macOS only.
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,4 +23,7 @@ jobs:
           cache: "npm"
       - run: npm ci
       # Downloads a real Positron build and runs src/test/positron/ inside it.
-      - run: npm run test-positron
+      - uses: posit-dev/setup-positron@main
+        with:
+          positron-channel: stable
+          run: npm run test-positron

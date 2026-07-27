@@ -6,9 +6,6 @@
 // analog of @vscode/test-electron.
 //
 // Run with `npm run test-positron` (which compiles first).
-//
-// NOTE: @posit-dev/positron-test-electron currently supports macOS only;
-// on other platforms, rely on the GitHub Actions workflow.
 
 import { runTests } from '@posit-dev/positron-test-electron';
 import * as path from 'node:path';
