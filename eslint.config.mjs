@@ -15,6 +15,17 @@ export default tseslint.config(
 			'out',
 		]
 	},
+	{
+		// Node scripts (e.g. the Positron test launcher) run outside the
+		// extension host and use Node globals.
+		files: ['scripts/**/*.mjs'],
+		languageOptions: {
+			globals: {
+				process: 'readonly',
+				console: 'readonly'
+			}
+		}
+	},
 	js.configs.recommended,
 	...tseslint.configs.recommended,
 	...tseslint.configs.stylistic,

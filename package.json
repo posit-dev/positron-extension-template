@@ -31,10 +31,12 @@
 		"lint": "eslint",
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
-		"test": "vscode-test"
+		"test": "vscode-test",
+		"test-positron": "npm run compile && node scripts/run-positron-tests.mjs"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.13.0",
+		"@posit-dev/positron-test-electron": "^0.0.2",
 		"@stylistic/eslint-plugin": "^2.9.0",
 		"@types/mocha": "^10.0.10",
 		"@types/node": "^20",
