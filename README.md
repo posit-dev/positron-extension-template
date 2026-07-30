@@ -72,6 +72,28 @@ The test suite includes:
 - Basic Positron API mocking for isolated testing
 - Graceful degradation when APIs are unavailable
 
+#### Positron API Tests
+
+To run tests against a real Positron instance, use [`positron-test-electron`](https://github.com/posit-dev/positron-test-electron):
+
+```bash
+npx positron-test-electron \
+    --channel daily \
+    --extension-development-path . \
+    --extension-tests-path ./out/test/index.js
+```
+
+Set `channel` to `daily` to test against upcoming changes, or `stable` to test against released builds. You can also pin a specific `version`:
+
+```bash
+npx positron-test-electron \
+    --version 2026.08.0-365 \
+    --extension-development-path . \
+    --extension-tests-path ./out/test/index.js
+```
+
+The package supports macOS, Windows, and Linux.
+
 ## 📚 Positron API Examples
 
 This template demonstrates key Positron APIs:
